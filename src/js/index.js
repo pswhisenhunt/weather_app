@@ -37,13 +37,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         const app = new App('#root', weather)
         app.render()
+        clearCache()
     }
 })
 
-//get fresh data every 5 minutes
-const refreshCache = () => {
-    setInterval(() => {
+//clear cache in 10 minutes
+const clearCache = () => {
+    setTimeout(() => {
         localStorage.removeItem('weather-data')
         localStorage.removeItem('coordinates')
-    }, 300000)
+    }, 600000)
 }
