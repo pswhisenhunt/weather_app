@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang-"en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, intial-scale=1" />
+        <title>Weather</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="./src/styles/index.css"/>
+    </head>
+    <body>
+        <header class="header">
+            <h1>Current Weather</h1>
+        </header>
+        <main id="root"></main>
+        
+        <template id="toggle-degree-template">
+            <button type="text" value="C" id="C">C</button>
+            <button type="text" value="F" id="F">F</button>
+        </template>
+
+        <template id="weather-overview-template" class="weather-overview">
+            <div class="weather-overview-location"></div>
+            <div class="weather-overview-icon"></div>
+            <div class="weather-overview-condition"></div>
+            <div class="weather-overview-current-temp"></div>
+        </template>
+
+        <template id="weather-report-template">
+            <div class="weather-report-condition"></div>
+            <div class="weather-report-day"></div>
+            <div class="weather-report-temp">Temperature Details:</div>
+            <div class="weather-report-air">Air Quality:</div>
+            <div class="weather-report-wind">Wind:</div>
+        </template>
+
+        <script type="module" src="./src/js/index.js"></script>
+    </body>
+</html>
